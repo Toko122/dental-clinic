@@ -55,7 +55,7 @@ export const Registration = () => {
     e.preventDefault(); 
 
     try {
-      const res = await axios.post("http://localhost:5000/api/users/register", form);
+      const res = await axios.post("https://backend-uw96.onrender.com/api/users/register", form);
       
       
       if(res) {

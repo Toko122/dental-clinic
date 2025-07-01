@@ -12,7 +12,7 @@ const AdminAppointments = () => {
 
   const fetchAppointment = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/admin/dashboard/getAppointment');
+      const res = await axios.get('https://backend-uw96.onrender.com/api/admin/dashboard/getAppointment');
       setAppointments(res.data.booking || []);
     } catch (err) {
       console.log('შეცდომა ვიზიტების მიღებისას:', err);

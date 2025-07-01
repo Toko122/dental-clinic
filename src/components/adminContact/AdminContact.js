@@ -12,7 +12,7 @@ const AdminContact = () => {
 
   const fetchContact = async () => {
     try {
-      const res = await axios.get('http://localhost:5000/api/admin/dashboard/getContact');
+      const res = await axios.get('https://backend-uw96.onrender.com/api/admin/dashboard/getContact');
       setContacts(res.data.contacts || []);
     } catch (err) {
       console.log('დატვირთვის შეცდომა:', err);

@@ -11,7 +11,7 @@ export default function ForgotPassword() {
      e.preventDefault()
      setLoading(true)
      try{
-       const res = await axios.post('http://localhost:5000/api/reset-password', { email })
+       const res = await axios.post('https://backend-uw96.onrender.com/api/reset-password', { email })
        setMessage(res.data.message)
      }catch(err){
       setMessage(err.response?.data?.message || 'Something went wrong')

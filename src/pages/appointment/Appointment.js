@@ -51,7 +51,7 @@ export const Appointment = () => {
       const token = localStorage.getItem('token');
 
       const res = await axios.post(
-        'http://localhost:5000/api/appointments/book',
+        'https://backend-uw96.onrender.com/api/appointments/book',
         formData,
         {
           headers: {

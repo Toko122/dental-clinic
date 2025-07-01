@@ -21,9 +21,9 @@ export const Admin = () => {
   const fetchStats = async () => {
     try {
       const [userRes, appointmentRes, contactRes] = await Promise.all([
-        axios.get('http://localhost:5000/api/admin/dashboard/userStats'),
-        axios.get('http://localhost:5000/api/admin/dashboard/appointment'),
-        axios.get('http://localhost:5000/api/admin/dashboard/contact'),
+        axios.get('https://backend-uw96.onrender.com/api/admin/dashboard/userStats'),
+        axios.get('https://backend-uw96.onrender.com/api/admin/dashboard/appointment'),
+        axios.get('https://backend-uw96.onrender.com/api/admin/dashboard/contact'),
       ]);
 
       setUserCount(userRes.data.users);

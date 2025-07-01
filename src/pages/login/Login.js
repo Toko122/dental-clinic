@@ -22,7 +22,7 @@ export const Login = () => {
     setLoading(true); 
 
     try {
-      const res = await axios.post('/users/login', form);
+      const res = await axios.post('https://backend-uw96.onrender.com/api/users/login', form);
 
       if (res.status === 200 && res.data.token) {
         localStorage.setItem("token", res.data.token);

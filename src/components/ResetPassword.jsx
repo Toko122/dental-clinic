@@ -12,9 +12,9 @@ export default function ResetPassword() {
 
   const handleReset = async (e) => {
     e.preventDefault();
-    setLoading(true); // ✅ moved to top
+    setLoading(true);
     try {
-      const res = await axios.post(`http://localhost:5000/api/reset-password/${token}`, { password: newPassword });
+      const res = await axios.post(`https://backend-uw96.onrender.com/api/reset-password/${token}`, { password: newPassword });
       setMessage(res.data.message);
       navigate('/login');
     } catch (err) {

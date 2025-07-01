@@ -60,7 +60,7 @@ const RatingStars = ({ productId }) => {
       } else{
          const fetchUserRating = async () => {
            try{
-             const res = await axios.get('http://localhost:5000/api/rating/user', {
+             const res = await axios.get('https://backend-uw96.onrender.com/api/rating/user', {
               params: {userId, productId}
              })
              if(res.data?.value){
