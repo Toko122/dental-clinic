@@ -20,7 +20,7 @@ export default function ResetPassword() {
     } catch (err) {
       setMessage(err.response?.data?.message || 'Something went wrong');
     } finally {
-      setLoading(false); // ✅ always called
+      setLoading(false)
     }
   }
 
